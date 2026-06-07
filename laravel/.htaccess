@@ -1,0 +1,5 @@
+# Bloque tout accès HTTP direct au dossier Laravel
+# Ce fichier doit être uploadé dans www/laravel/.htaccess sur le serveur
+
+Order deny,allow
+Deny from all
