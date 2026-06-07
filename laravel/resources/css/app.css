@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #faf8ec;          /* rusty-nail 50  — fond de page */
+  --foreground: #382010;          /* rusty-nail 950 — texte principal */
+  --card: #ffffff;
+  --card-foreground: #382010;     /* rusty-nail 950 */
+  --popover: #ffffff;
+  --popover-foreground: #382010;  /* rusty-nail 950 */
+  --primary: #a87926;             /* rusty-nail 600 — boutons, liens actifs */
+  --primary-foreground: #faf8ec;  /* rusty-nail 50 */
+  --primary-deep: #8c5d23;        /* rusty-nail 700 */
+  --secondary: #f4efcd;           /* rusty-nail 100 */
+  --secondary-foreground: #613d22; /* rusty-nail 900 */
+  --muted: #f4efcd;               /* rusty-nail 100 */
+  --muted-foreground: #8c5d23;    /* rusty-nail 700 */
+  --accent: #eade9e;              /* rusty-nail 200 */
+  --accent-foreground: #613d22;   /* rusty-nail 900 */
+  --destructive: oklch(0.55 0.20 25);
+  --destructive-foreground: #faf8ec;
+  --success: oklch(0.52 0.15 145);
+  --success-foreground: #faf8ec;
+  --warning: oklch(0.72 0.15 70);
+  --gold: #d2ae3d;                /* rusty-nail 400 */
+  --border: #dec666;              /* rusty-nail 300 */
+  --input: #dec666;               /* rusty-nail 300 */
+  --ring: #c3992f;                /* rusty-nail 500 */
+  --radius: 0.625rem;
+  --sidebar-background: #382010;  /* rusty-nail 950 — fond menu */
+  --sidebar-foreground: #faf8ec;  /* rusty-nail 50  — texte menu */
+  --sidebar-primary: #d2ae3d;     /* rusty-nail 400 — élément mis en avant */
+  --sidebar-primary-foreground: #382010; /* rusty-nail 950 */
+  --sidebar-accent: #704923;      /* rusty-nail 800 — survol / actif */
+  --sidebar-accent-foreground: #faf8ec; /* rusty-nail 50 */
+  --sidebar-border: #613d22;      /* rusty-nail 900 — séparateurs menu */
+  --sidebar-ring: #c3992f;        /* rusty-nail 500 */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-deep: var(--primary-deep);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-gold: var(--gold);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-display: 'Space Grotesk', sans-serif;
+  --shadow-soft: 0 1px 3px oklch(0.18 0.06 50 / 0.10), 0 1px 2px oklch(0.18 0.06 50 / 0.06);
+  --shadow-card: 0 4px 16px oklch(0.18 0.06 50 / 0.12), 0 1px 3px oklch(0.18 0.06 50 / 0.08);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+.markdown-content { line-height: 1.65; }
+.markdown-content h1, .markdown-content h2, .markdown-content h3 { font-weight: 600; margin-top: 1rem; margin-bottom: 0.4rem; }
+.markdown-content h1 { font-size: 1.2rem; }
+.markdown-content h2 { font-size: 1.05rem; }
+.markdown-content h3 { font-size: 0.95rem; }
+.markdown-content p { margin-bottom: 0.6rem; }
+.markdown-content ul, .markdown-content ol { padding-left: 1.4rem; margin-bottom: 0.6rem; }
+.markdown-content ul { list-style-type: disc; }
+.markdown-content ol { list-style-type: decimal; }
+.markdown-content li { margin-bottom: 0.2rem; }
+.markdown-content strong { font-weight: 600; }
+.markdown-content em { font-style: italic; }
+.markdown-content code { background: var(--muted); color: var(--foreground); padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.875em; font-family: monospace; }
+.markdown-content pre { background: var(--muted); padding: 0.75rem; border-radius: 6px; overflow-x: auto; margin-bottom: 0.6rem; }
+.markdown-content pre code { background: none; padding: 0; }
+.markdown-content a { color: var(--primary); text-decoration: underline; }
+.markdown-content blockquote { border-left: 3px solid var(--border); padding-left: 0.75rem; color: var(--muted-foreground); margin-bottom: 0.6rem; }
+.markdown-content > *:last-child { margin-bottom: 0; }

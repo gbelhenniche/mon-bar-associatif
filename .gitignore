@@ -1,0 +1,46 @@
+# ============================================================
+# Mon Bar Associatif — .gitignore
+# ============================================================
+
+# Système
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Laravel
+# ============================================================
+laravel/.env
+laravel/.env.local
+laravel/vendor/
+laravel/node_modules/
+laravel/bootstrap/cache/*.php
+laravel/storage/logs/
+laravel/storage/framework/cache/
+laravel/storage/framework/sessions/
+laravel/storage/framework/views/
+laravel/database/*.sqlite
+laravel/database/*.sqlite-journal
+
+# ============================================================
+# Assets compilés (à regénérer avec `npm run build`)
+# ============================================================
+build/
+
+# ============================================================
+# Fichiers de débogage et outils locaux (non destinés au repo)
+# ============================================================
+diagnose.php
+test.php
+deploy-ftp.sh
+DEPLOY_TO_OUVATON.sh
+MIGRATION_TOKEN_HELPER.sh
+CAISSE_CONTROLLER_CHANGES.txt
+make-release.sh
+
+# ============================================================
+# Migrations spécifiques à l'instance (données réelles)
+# Chaque installation a ses propres migrations de données.
+# ============================================================
+laravel/database/migrations/*_import_*.php
+laravel/database/migrations/*_seed_admin_*.php
+CLAUDE.md
